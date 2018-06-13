@@ -6,6 +6,8 @@ Matrix8::Matrix8(int latch_pin, int clock_pin, int data_pin) {
   clock_pin_ = clock_pin;
   data_pin_ = data_pin;
   row_ = 0;
+  // Set pins to output
+  initPins();
   // Create buffer
   buffer_ = new byte[MATRIX_SIZE];
 }
@@ -48,4 +50,11 @@ void Matrix8::set(int row, int column, bool value) {
 void Matrix8::clear() {
   // Set all bytes to zero
   for (int i = 0; i < MATRIX_SIZE; i++) buffer_[i] = 0;
+}
+
+void Matrix8::initPins() {
+  // Set pins to output
+  pinMode(latch_pin_, OUTPUT);
+  pinMode(clock_pin_, OUTPUT);
+  pinMode(data_pin_, OUTPUT);
 }

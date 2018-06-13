@@ -20,4 +20,8 @@ class Matrix8 {
   void set(int x, int y, bool value);
   // Clear all buffer
   void clear();
+
+ private:
+  // Setup microcontroller pins for output
+  void initPins();
 };
