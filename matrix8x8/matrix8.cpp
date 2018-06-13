@@ -35,3 +35,17 @@ void Matrix8::draw() {
     row_ <<= 1;
   }
 }
+
+void Matrix8::set(int row, int column, bool value) {
+  if (value)
+    // LED ON
+    buffer_[row] |= (1 << column);
+  else
+    // LED OFF
+    buffer_[row] &= ~(1 << column);
+}
+
+void Matrix8::clear() {
+  // Set all bytes to zero
+  for (int i = 0; i < MATRIX_SIZE; i++) buffer_[i] = 0;
+}
