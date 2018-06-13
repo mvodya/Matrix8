@@ -10,6 +10,8 @@ Matrix8::Matrix8(int latch_pin, int clock_pin, int data_pin) {
   initPins();
   // Create buffer
   buffer_ = new byte[MATRIX_SIZE];
+  // Clear buffer after (shift registers may contain any data)
+  clear();
 }
 
 Matrix8::Matrix8(int latch_pin, int clock_pin, int data_pin, byte &buffer) {
@@ -23,6 +25,11 @@ Matrix8::Matrix8(int latch_pin, int clock_pin, int data_pin, byte &buffer) {
 }
 
 void Matrix8::draw() {
+  // Go to function with zero delay
+  draw(0);
+}
+
+void Matrix8::draw(int del) {
   row_ = 1;
   for (int i = 0; i < MATRIX_SIZE; i++) {
     // Lock latch pin
@@ -35,6 +42,8 @@ void Matrix8::draw() {
     digitalWrite(latch_pin_, 1);
     // Switch to next row
     row_ <<= 1;
+    // Delay
+    delay(del);
   }
 }
 

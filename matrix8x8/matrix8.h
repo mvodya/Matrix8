@@ -14,6 +14,8 @@ class Matrix8 {
   Matrix8(int latch_pin, int clock_pin, int data_pin, byte &buffer);
   // Draw matrix (row by row method)
   void draw();
+  // Draw with delay
+  void draw(int del);
 
   /* DRAWING FUNCTIONS */
   // Set one pixel
