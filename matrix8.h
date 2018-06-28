@@ -1,3 +1,5 @@
+#pragma once
+
 #include <Arduino.h>
 // Size of matrix (another size doesn't tested)
 #define MATRIX_SIZE 8
