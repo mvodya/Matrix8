@@ -1,3 +1,7 @@
+// Matrix8 library
+// This library control LED 8x8 matrix via two shift registers (for example 74HC595).
+// 
+// Developed by Mark Vodyanitskiy (@mvodya) 2018
 #pragma once
 
 #include <Arduino.h>

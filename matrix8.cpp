@@ -1,3 +1,4 @@
+// Developed by Mark Vodyanitskiy (@mvodya) 2018
 #include "matrix8.h"
 
 Matrix8::Matrix8(int latch_pin, int clock_pin, int data_pin) {
