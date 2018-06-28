@@ -11,7 +11,9 @@ Matrix8::Matrix8(int latch_pin, int clock_pin, int data_pin) {
   // Create buffer
   buffer_ = new byte[MATRIX_SIZE];
   // Clear buffer after (shift registers may contain any data)
+#if MATRIX_REGISTERS_INIT_CLEAR
   clear();
+#endif
 }
 
 Matrix8::Matrix8(int latch_pin, int clock_pin, int data_pin, byte &buffer) {

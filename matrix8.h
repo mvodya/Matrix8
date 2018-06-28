@@ -1,5 +1,8 @@
 #include <Arduino.h>
+// Size of matrix (another size doesn't tested)
 #define MATRIX_SIZE 8
+// Clear registers after initialization
+#define MATRIX_REGISTERS_INIT_CLEAR 1
 
 class Matrix8 {
  private:
