@@ -48,5 +48,5 @@ void loop() {
 * `set(x, y, value)` - set segment value by position
 * `draw()` - draw row by row matrix
 * `draw(delay)` - draw with delay after rows print, just for test
-* `getBuffer()` - return matrix buffer pointer (example/smile-animate)
+* `getBuffer()` - return matrix buffer pointer _(example/smile-animate)_
 * `clear()`  - clear matrix buffer
