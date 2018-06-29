@@ -17,16 +17,6 @@ Matrix8::Matrix8(int latch_pin, int clock_pin, int data_pin) {
 #endif
 }
 
-Matrix8::Matrix8(int latch_pin, int clock_pin, int data_pin, byte &buffer) {
-  // Set initialization vars
-  latch_pin_ = latch_pin;
-  clock_pin_ = clock_pin;
-  data_pin_ = data_pin;
-  row_ = 0;
-  // Set buffer
-  buffer_ = buffer;
-}
-
 void Matrix8::draw() {
   // Go to function with zero delay
   draw(0);
@@ -49,6 +39,8 @@ void Matrix8::draw(int del) {
     delay(del);
   }
 }
+
+byte* Matrix8::getBuffer() { return buffer_; }
 
 void Matrix8::set(int row, int column, bool value) {
   if (value)
