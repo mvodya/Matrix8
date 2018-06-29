@@ -45,8 +45,8 @@ void loop() {
 ## Functions
 
 * `Matrix8(latch, clock, data)` - init matrix8 constructor
-* `Matrix8(latch, clock, data, point to byte buffer)` - init matrix8 with external buffer
 * `set(x, y, value)` - set segment value by position
 * `draw()` - draw row by row matrix
 * `draw(delay)` - draw with delay after rows print, just for test
+* `getBuffer()` - return matrix buffer pointer
 * `clear()`  - clear matrix buffer
