@@ -2,6 +2,8 @@
 // Simple random
 // by Mark Vodyanitskiy (@mvodya) 2018
 #include <matrix8.h>
+// Delay (milisecond) for update
+#define UPDATE_DELAY 1000000
 
 // Init matrix8
 //   latch - 7
@@ -29,7 +31,7 @@ void update() {
 
 void loop() {
   // Timer for update
-  if (timer + 1000000 < micros()) {
+  if (timer + UPDATE_DELAY < micros()) {
     timer = micros();
     update();
   }
