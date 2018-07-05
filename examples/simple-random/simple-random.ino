@@ -14,9 +14,18 @@ byte *buf;
 // Timer for update matrix
 unsigned long timer = 0;
 
-void setup() {}
+void setup() {
+  // Set pointer to matrix buffer
+  buf = matrix.getBuffer();
+  // Random seed (using noise from analog pin)
+  randomSeed(analogRead(0));
+}
 
-void update() {}
+void update() {
+  for (int i = 0; i < 8; i++) {
+    buf[i] = random(256);
+  }
+}
 
 void loop() {
   // Timer for update
