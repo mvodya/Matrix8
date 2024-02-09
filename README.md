@@ -2,7 +2,7 @@
 
 ## LED 8x8 Matrix via shift registers.
 
-![8x8 matrix](https://frogling.com/site/wp-content/uploads/2018/06/DSC_0932.jpg)
+![8x8 matrix](examples/demo.jpg)
 
 This library control LED 8x8 matrix via two shift registers (for example 74HC595).
 
@@ -40,7 +40,7 @@ void loop() {
 }
 ```
 
-![8x8 matrix cross](https://frogling.com/site/wp-content/uploads/2018/06/p2212.jpg)
+![8x8 matrix cross](examples/demo2.jpg)
 
 ## Functions
 
